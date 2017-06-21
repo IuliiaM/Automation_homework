@@ -33,3 +33,4 @@ def test_navigation_using_chrome():
                     driver.find_elements_by_tag_name('h1')) == 1
 
     driver.quit()
+
