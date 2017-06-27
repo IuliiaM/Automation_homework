@@ -27,7 +27,6 @@ def test_navigation_using_chrome():
     new_window_opening = driver.find_element_by_css_selector("img.image.img-responsive").click()
 
     # taking values from the new window
-
     duck2_name = driver.find_element_by_css_selector('h1.title').text
     duck2_regular_price = driver.find_element_by_css_selector ("del.regular-price").text
     duck2_regular_price_decor = driver.find_element_by_css_selector ("del.regular-price").value_of_css_property('text-decoration-line')
