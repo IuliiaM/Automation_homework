@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as ec
+import os
 
 def test_navigation_using_chrome():
     pageAddr = "http://localhost/litecart/admin/"
@@ -24,6 +25,7 @@ def test_navigation_using_chrome():
     driver.find_element_by_xpath("//label[contains(., ' Enabled')]").click()
     driver.find_element_by_xpath("//label[contains(., ' Unisex')]").click()
 
+
     driver.find_element_by_xpath("//input[@name='date_valid_from']").send_keys("2017-03-07")
     driver.find_element_by_xpath("//input[@name='date_valid_to']").send_keys("2020-03-07")
     driver.find_element_by_xpath("//input[@name='code']").send_keys("11111")
@@ -43,8 +45,10 @@ def test_navigation_using_chrome():
     driver.find_element_by_xpath("//input[@name='dim_z']").send_keys("30")
 
     # add image
-    driver.find_element_by_xpath("//input[@name='new_images[]']").send_keys("C:\\Users\\iuliia.marutyak\\PySelenium\\test_6\\Raccoon.jpg")
+    driver.find_element_by_xpath("//input[@name='new_images[]']").send_keys(os.getcwd() + "/Raccoon.jpg")
     driver.find_element_by_xpath("//button[@value='Save']").click()
 
-    WebDriverWait(driver, 10).until(ec.presence_of_element_located((By.XPATH, ("//./a[contains(.,'Raccoon')]"))))
+    # checking presence
+    WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.XPATH, ("//./a[contains(.,'Raccoon')]"))))
+
     driver.quit()
