@@ -13,7 +13,7 @@ def test_navigation_using_chrome():
     #   finding duck title
     duck1_name = driver.find_element_by_css_selector('div.name').text
 
-    # taking price values
+    # taking price
     duck1_regular_price = driver.find_element_by_css_selector ("s.regular-price").text
     duck1_regular_price_decor = driver.find_element_by_css_selector ("s.regular-price").value_of_css_property('text-decoration-line')
     duck1_regular_price_color = driver.find_element_by_css_selector ("s.regular-price").value_of_css_property('color')
