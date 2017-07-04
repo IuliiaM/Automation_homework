@@ -52,3 +52,4 @@ def test_navigation_using_chrome():
     WebDriverWait(driver, 5).until(ec.presence_of_element_located((By.XPATH, ("//./a[contains(.,'Raccoon')]"))))
 
     driver.quit()
+
