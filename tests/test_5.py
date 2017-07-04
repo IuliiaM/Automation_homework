@@ -37,7 +37,6 @@ def test_navigation_using_chrome():
     duck2_campaign_price_color = driver.find_element_by_css_selector('strong.campaign-price').value_of_css_property('color')
 
     #compare and print
-
     print('Product Name is equal on Main page and Item Page - ', duck1_name == duck2_name)
     assert (duck1_name == duck2_name), "Product Title doesn't match"
 
