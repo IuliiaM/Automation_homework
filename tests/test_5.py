@@ -50,8 +50,10 @@ def test_navigation_using_chrome():
     assert (duck1_regular_price_color == duck2_regular_price_color), "Product RegPrice color doesn't match"
 
  # need to check this line
+
     print('Product Campaign Price is equal on Main page and Item Page - ', duck1_campaign_price == duck2_campaign_price)
     assert (duck1_campaign_price == duck2_campaign_price), "Product Campaign Price doesn't match"
+
 
     print('Product Campaign Price font weight is equal on Main page and Item Page - ', duck1_campaign_price_decor == duck2_campaign_price_decor)
     assert (duck1_campaign_price_decor == duck2_campaign_price_decor), "Product Campaign Price font weight doesn't match"
