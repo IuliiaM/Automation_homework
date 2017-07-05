@@ -38,3 +38,4 @@ def test_navigation():
                 inner_links = outer_links + '/ul/li[' + str(cycle_next) + ']'
                 driver.find_element_by_xpath(inner_links).click()
     driver.quit()
+
