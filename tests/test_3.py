@@ -17,3 +17,4 @@ def test_google_using_chrome():
     WebDriverWait(chrome_driver, 3).until(ec.title_is("My Store"))
     sleep(5)
     chrome_driver.quit()
+
