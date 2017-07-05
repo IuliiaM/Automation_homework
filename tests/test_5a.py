@@ -62,3 +62,4 @@ def test_navigation_using_chrome():
     assert (duck1_campaign_price_color == duck2_campaign_price_color), "Product Campaign Price color doesn't match"
 
 
+
